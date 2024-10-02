@@ -1,0 +1,17 @@
+# Algoritmo Cálculo da Média
+# Função: Fornecer o cálculo da Média de um aluno e sua situação
+# Autor: PET EQ
+# Data: 02/10/2024
+
+# Entrada de dados
+N1 = float(input("Digite a nota N1: "))
+N2 = float(input("Digite a nota N2: "))
+
+# Cálculo da média
+Media = (N1 + N2) / 2
+
+# Verificação da situação do aluno
+if Media > 7:
+    print("Aprovado(a)")
+else:
+    print("Reprovado(a)")
