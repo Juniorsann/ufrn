@@ -1,0 +1,24 @@
+def calcular_energia(massa, calor_especifico, temp_inicial, temp_final):
+    # Verifica se está aquecendo ou resfriando
+    if temp_final > temp_inicial:
+        # Aquecimento
+        energia = massa * calor_especifico * (temp_final - temp_inicial)
+        print(f"Você está aquecendo o fluido. A energia necessária é: {energia} J")
+    elif temp_final < temp_inicial:
+        # Resfriamento (energia liberada)
+        energia = massa * calor_especifico * (temp_inicial - temp_final)
+        print(f"Você está resfriando o fluido. A energia liberada é: {energia} J")
+    else:
+        # Nenhuma mudança de temperatura
+        energia = 0
+        print("A temperatura inicial e final são iguais. Nenhuma energia é necessária.")
+    return energia
+
+# Entrada de dados
+massa = float(input("Digite a massa do fluido (kg): "))
+calor_especifico = float(input("Digite o calor específico do fluido (J/kg°C): "))
+temp_inicial = float(input("Digite a temperatura inicial (°C): "))
+temp_final = float(input("Digite a temperatura final desejada (°C): "))
+
+# Calcula a energia necessária
+energia = calcular_energia(massa, calor_especifico, temp_inicial, temp_final)
